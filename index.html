@@ -3,239 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <title>Personal Portfolio | Prompt</title>
+    <script src="https://kit.fontawesome.com/e04a44eac6.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <h1 class="logo">..<span>P</span>ROMPT</h1>
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
-            <br><br>
-            <div class="spacer-w40"></div>
-            <div class="header-text">
-                <div class="intro">
-                    <p>Web Developer - UI/UX Designer - Software Developer</p>
-                    <h1>Hi, I'm <span>Prompt</span><br>Phawach from Thailand</h1>
+
+<!-- ===== HEADER ===== -->
+<header id="header">
+    <div class="container header-container">
+        <h1 class="logo">Prompt</h1>
+        <nav>
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="close-menu"><i class="fa-solid fa-xmark" onclick="closeMenu()"></i></li>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+        </nav>
+        <div class="intro-text">
+            <p>Web Developer | UI/UX Designer | Software Developer</p>
+            <h2>Hi, I'm <span>Prompt</span> Phawach</h2>
+            <p class="location">From Thailand</p>
+        </div>
+    </div>
+</header>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-img">
+                <img src="images/user.gif" alt="Prompt">
+            </div>
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>I'm Prompt from Thailand. I build websites using HTML, CSS, and JavaScript. I also enjoy working with React and TypeScript. I love coding in Visual Studio Code and writing documentation in Markdown.</p>
+                
+                <!-- Tabs -->
+                <div class="tabs">
+                    <button class="tab-link active" onclick="openTab(event, 'skills')">Skills</button>
+                    <button class="tab-link" onclick="openTab(event, 'experience')">Experience</button>
+                    <button class="tab-link" onclick="openTab(event, 'social')">Social</button>
+                </div>
+                <div id="skills" class="tab-content active">
+                    <ul>
+                        <li>Web/Software Development</li>
+                        <li>Web App Layouts</li>
+                        <li>Application Layouts</li>
+                    </ul>
+                </div>
+                <div id="experience" class="tab-content">
+                    <ul>
+                        <li>React (JS/TS)</li>
+                        <li>Electron JS</li>
+                        <li>Vanilla TypeScript</li>
+                    </ul>
+                </div>
+                <div id="social" class="tab-content">
+                    <ul>
+                        <li><a href="https://dev.to/ppprompt" target="_blank">DEV.TO</a></li>
+                        <li><a href="https://stackoverflow.com/users/28432190" target="_blank">Stack Overflow</a></li>
+                        <li><a href="https://github.com/Prompt-bit" target="_blank">GitHub</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="images/user.gif" class="img" width="400" height="400">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="subtitle">About Me</h1>
-                    <p>I'm Prompt from Thailand, and I make websites using HTML, CSS, and JavaScript. I sometimes use React with TypeScript or JavaScript, but the one I love most is TypeScript. I really enjoy writing code in my favorite editor, Visual Studio Code, available on Windows and Mac. I also enjoy Markdown — everything you need to know to get started writing documentation on GitHub.</p>
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="navigate_tab('skills')">Skills</p>
-                        <p class="tab-links" onclick="navigate_tab('exp')">Experience</p>
-                        <p class="tab-links" onclick="navigate_tab('social')">Social</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>Developing</span><br> Web/Software Developer</li>
-                            <li><span>Web Developer</span><br> Web App Layouts</li>
-                            <li><span>Software Developer</span><br> Application Layouts</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="exp">
-                        <ul>
-                            <li><span>React</span><br> Web with JS or TS</li>
-                            <li><span>Electron JS</span><br> Desktop Apps</li>
-                            <li><span>Vanilla TypeScript</span><br> Microsoft's JS</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="social">
-                        <ul>
-                            <li><span>DEV.TO</span><br> <a href="https://dev.to/ppprompt">CLICK</a></li>
-                            <li><span>Stack Overflow</span><br> <a href="https://stackoverflow.com/users/28432190">CLICK</a></li>
-                            <li><span>Github</span><br> <a href="https://github.com/Prompt-bit">CLICK</a></li>
-                        </ul>
-                    </div>
-                </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services">
+    <div class="container">
+        <h2>My Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <i class="fa-brands fa-html5"></i>
+                <h3>HTML, CSS, JS</h3>
+                <p>Website development and collaboration using Visual Studio Code Live Share.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-brands fa-app-store"></i>
+                <h3>Electron Apps</h3>
+                <p>Create desktop apps and share them directly via email.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-brands fa-react"></i>
+                <h3>React Websites</h3>
+                <p>Build modern React applications with optional extra features.</p>
             </div>
         </div>
     </div>
-    <div id="services">
-        <div class="container">
-            <h1 class="subtitle">My Services</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fa-brands fa-html5"></i>
-                    <h2>HTML, CSS, JS | Website Collaboration</h2>
-                    <p>If you ask me to do this, I will collaborate with you
-                       on Visual Studio Code if you have Live Share.
-                    </p>
-                </div>
-                <div>
-                    <i class="fa-brands fa-app-store"></i>
-                    <h2>Electron App Making | App Making</h2>
-                    <p>If you ask me to do this I will help you make a electron app
-                        then send it to you through email
-                    </p>
-                </div>
-                <div>
-                    <i class="fa-brands fa-react"></i>
-                    <h2>Building React Websites</h2>
-                    <p>If you ask me to do this I will collaborate
-                        with you on your react app. If you want you
-                        could also submit extra requests through forms.
-                    </p>
-                    <a href="https://forms.gle/LmFJnUt4EL7m3vp96" target="_blank">CLICK HERE</a>
-                </div>
+</section>
+
+<!-- ===== PORTFOLIO ===== -->
+<section id="portfolio">
+    <div class="container">
+        <h2>Portfolio</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-card">
+                <i class="fa-solid fa-utensils"></i>
+                <h3>Food Picker</h3>
+                <a href="https://prompt-bit.github.io/food-picker/" target="_blank">View</a>
+            </div>
+            <div class="portfolio-card">
+                <i class="fa-solid fa-clock"></i>
+                <h3>Pomodoro Timer</h3>
+                <a href="https://chromewebstore.google.com/detail/pomodoro-timer/hicallhmhpflaadfdifjbcgciniklmfb" target="_blank">View</a>
+            </div>
+            <div class="portfolio-card">
+                <i class="fa-solid fa-sitemap"></i>
+                <h3>Tabs Organizer</h3>
+                <a href="https://chromewebstore.google.com/detail/phicdimiaadjkfkbljamnnccdlokgmmi" target="_blank">View</a>
+            </div>
+            <div class="portfolio-card">
+                <i class="fa-solid fa-water"></i>
+                <h3>Cool Ocean Theme</h3>
+                <a href="https://chromewebstore.google.com/detail/apoiacdpieboglcfdoainljkmpilnmji" target="_blank">View</a>
             </div>
         </div>
     </div>
-    <div id="portfolio">
-        <div class="container">
-            <h1 class="subtitle">My Portfolio</h1>
-            <div class="work-list">
-                <div>
-                    <i class="fa-solid fa-utensils"></i>
-                    <h2 class="subtitle">Food Picker</h2>
-                    <p>Now don't worry about food, because
-                        you now have a food picker available for free!
-                    </p>
-                    <a href="https://prompt-bit.github.io/food-picker/" target="_blank">
-                        Open Website
-                    </a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-clock"></i>
-                    <h2 class="subtitle">Pomodoro Timer</h2>
-                    <p>Now don't worry about losing track of time
-                        because now you can use Pomodoro Timer
-                    </p>
-                    <a href="https://chromewebstore.google.com/detail/pomodoro-timer/hicallhmhpflaadfdifjbcgciniklmfb?authuser=0&hl=en" target="_blank">
-                        View
-                    </a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-sitemap"></i>
-                    <h2 class="subtitle">Tabs Organize</h2>
-                    <p>Now don't worry about losing tract of your chrome
-                        tabs
-                    </p>
-                    <a href="https://chromewebstore.google.com/detail/phicdimiaadjkfkbljamnnccdlokgmmi?authuser=0&hl=en" target="_blank">
-                        View
-                    </a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-water"></i>
-                    <h2 class="subtitle">Cool Ocean Theme</h2>
-                    <p>If you don't get to go to the beach,
-                        don't you worry! I got you covered!
-                    </p>
-                    <a href="https://chromewebstore.google.com/detail/apoiacdpieboglcfdoainljkmpilnmji?authuser=0&hl=en" target="_blank">
-                        View
-                    </a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-paint-roller"></i>
-                    <h2 class="subtitle">Titanium Color Picker</h2>
-                    <p>Find colors easily with this extension.
-                    </p>
-                    <a href="https://chromewebstore.google.com/detail/hahbgocjgknkngijpfhbkblfhidonaff?authuser=0&hl=en" target="_blank">
-                        View
-                    </a>
-                </div>
-                <div>
-                    <i class="fa-solid fa-circle-info"></i>
-                    <h2 class="subtitle">System Info Viewer</h2>
-                    <p>View you system info easily!
-                    </p>
-                    <a href="https://github.com/Prompt-bit/System-Info-Viewer" target="_blank">
-                        Open Github
-                    </a>
-                </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+    <div class="container contact-container">
+        <h2>Contact Me</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <p><i class="fa-solid fa-envelope"></i> phawach4prompt@gmail.com</p>
             </div>
+            <form name="submit-to-google-sheet">
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="Email" placeholder="Your Email" required>
+                <textarea name="Message" placeholder="Your Message" rows="6"></textarea>
+                <button type="submit">Send</button>
+            </form>
         </div>
     </div>
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="subtitle">Contact Me</h1>
-                    <p>Feel Free to contact me anytime you like!</p>
-                    <p><i class="fa-solid fa-envelope"></i>phawach4prompt@gmail.com</p>
-                </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Enter your Name" required>
-                        <input type="email" name="Email" placeholder="Enter your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Message Here"></textarea>
-                        <button type="submit" class="btn">Send</button>
-                    </form>
-                </div>
-            </div>
-        </div>
+</section>
 
-        <div class="copyright">
-            <p>Copyright &copy; Prompt. Licensed Under the MIT License</p>
-            <br>
-            <a href="#header">
-                <button class="btn">Scroll to Top</button>
-            </a>
-        </div>
-    </div>
-    <!-- Adding Scripts-->
-     <script>
-        // Tab Scripts ( in about )
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
+<!-- ===== FOOTER ===== -->
+<footer>
+    <p>&copy; 2026 Prompt. MIT License.</p>
+    <a href="#header">Back to Top</a>
+</footer>
 
-        function navigate_tab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab")
-        }
-        // Sidebar Scripts
-        window.onload = function() {
-            const sidemenu = document.getElementById("sidemenu");
-
-            window.openmenu = function() {
-                sidemenu.style.right = "0";
-            }
-
-            window.closemenu = function() {
-                sidemenu.style.right = "-200px";
-            }
-        };
-        // Send to Google Sheet Scripts
-        const scriptURL = 'https://script.google.com/macros/s/AKfycby8ZLuYE0tubKRkX9Z4Tqlw6L8XdZSDc4jHypDozdDhsJg767sTBI5ljMsJi-Dk618W1g/exec';
-        const form = document.forms['submit-to-google-sheet'];
-
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) });
-            form.reset(); // optional: clear form immediately
-        });
-
-
-     </script>
-     <script src="https://kit.fontawesome.com/e04a44eac6.js" crossorigin="anonymous"></script>
+<script src="script.js"></script>
 </body>
-
 </html>
-
-
-
