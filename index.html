@@ -1,157 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prompt Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/e04a44eac6.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prompt Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/e04a44eac6.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<!-- ===== HEADER ===== -->
-<header id="header">
+  <!-- ===== HEADER ===== -->
+  <header>
     <div class="container header-container">
-        <h1 class="logo">Prompt</h1>
-        <nav>
-            <ul id="sidemenu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li class="close-menu"><i class="fa-solid fa-xmark" onclick="closeMenu()"></i></li>
-            </ul>
-            <i class="fa-solid fa-bars" onclick="openMenu()"></i>
-        </nav>
-        <div class="intro-text">
-            <p>Web Developer | UI/UX Designer | Software Developer</p>
-            <h2>Hi, I'm <span>Prompt</span> Phawach</h2>
-            <p class="location">From Thailand</p>
-        </div>
-    </div>
-</header>
+      <h1 class="logo">Prompt</h1>
+      <nav>
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="close-menu"><i class="fa-solid fa-xmark" onclick="closeMenu()"></i></li>
+        </ul>
+        <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+      </nav>
 
-<!-- ===== ABOUT ===== -->
-<section id="about">
+      <div class="intro-text">
+        <p>Web Developer | Software Creator | Tech Enthusiast</p>
+        <h2>Hi, I'm <span>Prompt</span> Phawach</h2>
+        <p class="location">From Thailand</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <div class="container about-grid">
+      <div class="about-img">
+        <img src="images/user.gif" alt="Prompt">
+      </div>
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>I'm Prompt from Thailand. I create websites, extensions, apps, and teach coding in a fun way!</p>
+
+        <div class="tabs">
+          <button class="tab-link active" onclick="openTab(event,'skills')">Skills</button>
+          <button class="tab-link" onclick="openTab(event,'experience')">Experience</button>
+          <button class="tab-link" onclick="openTab(event,'social')">Social</button>
+        </div>
+
+        <div id="skills" class="tab-content active">
+          <ul>
+            <li>Web & Software Development</li>
+            <li>HTML, CSS, JS, React, TypeScript</li>
+            <li>Application Layouts & Design</li>
+          </ul>
+        </div>
+
+        <div id="experience" class="tab-content">
+          <ul>
+            <li>React / Electron / JS / TS</li>
+            <li>Chrome Extensions</li>
+            <li>Visual Studio Code + Markdown</li>
+          </ul>
+        </div>
+
+        <div id="social" class="tab-content">
+          <ul>
+            <li><a href="https://dev.to/ppprompt" target="_blank">DEV.TO</a></li>
+            <li><a href="https://stackoverflow.com/users/28432190" target="_blank">Stack Overflow</a></li>
+            <li><a href="https://github.com/Prompt-bit" target="_blank">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services">
     <div class="container">
-        <div class="about-grid">
-            <div class="about-img">
-                <img src="images/user.gif" alt="Prompt">
-            </div>
-            <div class="about-text">
-                <h2>About Me</h2>
-                <p>I'm Prompt from Thailand. I build websites using HTML, CSS, and JavaScript. I also enjoy working with React and TypeScript. I love coding in Visual Studio Code and writing documentation in Markdown.</p>
-                
-                <!-- Tabs -->
-                <div class="tabs">
-                    <button class="tab-link active" onclick="openTab(event, 'skills')">Skills</button>
-                    <button class="tab-link" onclick="openTab(event, 'experience')">Experience</button>
-                    <button class="tab-link" onclick="openTab(event, 'social')">Social</button>
-                </div>
-                <div id="skills" class="tab-content active">
-                    <ul>
-                        <li>Web/Software Development</li>
-                        <li>Web App Layouts</li>
-                        <li>Application Layouts</li>
-                    </ul>
-                </div>
-                <div id="experience" class="tab-content">
-                    <ul>
-                        <li>React (JS/TS)</li>
-                        <li>Electron JS</li>
-                        <li>Vanilla TypeScript</li>
-                    </ul>
-                </div>
-                <div id="social" class="tab-content">
-                    <ul>
-                        <li><a href="https://dev.to/ppprompt" target="_blank">DEV.TO</a></li>
-                        <li><a href="https://stackoverflow.com/users/28432190" target="_blank">Stack Overflow</a></li>
-                        <li><a href="https://github.com/Prompt-bit" target="_blank">GitHub</a></li>
-                    </ul>
-                </div>
-            </div>
+      <h2>My Services</h2>
+      <div class="service-grid">
+        <div class="service-card">
+          <i class="fa-brands fa-html5"></i>
+          <h3>Web Dev</h3>
+          <p>Build modern websites using HTML, CSS, and JS.</p>
         </div>
+        <div class="service-card">
+          <i class="fa-brands fa-app-store"></i>
+          <h3>Desktop Apps</h3>
+          <p>Create apps and extensions for desktop and Chrome.</p>
+        </div>
+        <div class="service-card">
+          <i class="fa-brands fa-react"></i>
+          <h3>React Projects</h3>
+          <p>Build interactive React websites & apps.</p>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- ===== SERVICES ===== -->
-<section id="services">
+  <!-- ===== PORTFOLIO ===== -->
+  <section id="portfolio">
     <div class="container">
-        <h2>My Services</h2>
-        <div class="service-grid">
-            <div class="service-card">
-                <i class="fa-brands fa-html5"></i>
-                <h3>HTML, CSS, JS</h3>
-                <p>Website development and collaboration using Visual Studio Code Live Share.</p>
-            </div>
-            <div class="service-card">
-                <i class="fa-brands fa-app-store"></i>
-                <h3>Electron Apps</h3>
-                <p>Create desktop apps and share them directly via email.</p>
-            </div>
-            <div class="service-card">
-                <i class="fa-brands fa-react"></i>
-                <h3>React Websites</h3>
-                <p>Build modern React applications with optional extra features.</p>
-            </div>
+      <h2>Portfolio</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-card">
+          <i class="fa-solid fa-utensils"></i>
+          <h3>Food Picker</h3>
+          <a href="https://prompt-bit.github.io/food-picker/" target="_blank">View</a>
         </div>
-    </div>
-</section>
-
-<!-- ===== PORTFOLIO ===== -->
-<section id="portfolio">
-    <div class="container">
-        <h2>Portfolio</h2>
-        <div class="portfolio-grid">
-            <div class="portfolio-card">
-                <i class="fa-solid fa-utensils"></i>
-                <h3>Food Picker</h3>
-                <a href="https://prompt-bit.github.io/food-picker/" target="_blank">View</a>
-            </div>
-            <div class="portfolio-card">
-                <i class="fa-solid fa-clock"></i>
-                <h3>Pomodoro Timer</h3>
-                <a href="https://chromewebstore.google.com/detail/pomodoro-timer/hicallhmhpflaadfdifjbcgciniklmfb" target="_blank">View</a>
-            </div>
-            <div class="portfolio-card">
-                <i class="fa-solid fa-sitemap"></i>
-                <h3>Tabs Organizer</h3>
-                <a href="https://chromewebstore.google.com/detail/phicdimiaadjkfkbljamnnccdlokgmmi" target="_blank">View</a>
-            </div>
-            <div class="portfolio-card">
-                <i class="fa-solid fa-water"></i>
-                <h3>Cool Ocean Theme</h3>
-                <a href="https://chromewebstore.google.com/detail/apoiacdpieboglcfdoainljkmpilnmji" target="_blank">View</a>
-            </div>
+        <div class="portfolio-card">
+          <i class="fa-solid fa-clock"></i>
+          <h3>Pomodoro Timer</h3>
+          <a href="https://chromewebstore.google.com/detail/pomodoro-timer/hicallhmhpflaadfdifjbcgciniklmfb" target="_blank">View</a>
         </div>
+        <div class="portfolio-card">
+          <i class="fa-solid fa-sitemap"></i>
+          <h3>Tabs Organizer</h3>
+          <a href="https://chromewebstore.google.com/detail/phicdimiaadjkfkbljamnnccdlokgmmi" target="_blank">View</a>
+        </div>
+        <div class="portfolio-card">
+          <i class="fa-solid fa-water"></i>
+          <h3>Cool Ocean Theme</h3>
+          <a href="https://chromewebstore.google.com/detail/apoiacdpieboglcfdoainljkmpilnmji" target="_blank">View</a>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- ===== CONTACT ===== -->
-<section id="contact">
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
     <div class="container contact-container">
-        <h2>Contact Me</h2>
-        <div class="contact-grid">
-            <div class="contact-info">
-                <p><i class="fa-solid fa-envelope"></i> phawach4prompt@gmail.com</p>
-            </div>
-            <form name="submit-to-google-sheet">
-                <input type="text" name="Name" placeholder="Your Name" required>
-                <input type="email" name="Email" placeholder="Your Email" required>
-                <textarea name="Message" placeholder="Your Message" rows="6"></textarea>
-                <button type="submit">Send</button>
-            </form>
+      <h2>Contact Me</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p><i class="fa-solid fa-envelope"></i> phawach4prompt@gmail.com</p>
         </div>
+        <form name="submit-to-google-sheet">
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="email" name="Email" placeholder="Your Email" required>
+          <textarea name="Message" placeholder="Your Message" rows="6"></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
     </div>
-</section>
+  </section>
 
-<!-- ===== FOOTER ===== -->
-<footer>
+  <!-- ===== FOOTER ===== -->
+  <footer>
     <p>&copy; 2026 Prompt. MIT License.</p>
     <a href="#header">Back to Top</a>
-</footer>
+  </footer>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
