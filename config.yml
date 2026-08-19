@@ -1,4 +1,4 @@
-theme: just-the-docs
-title: Prompt Hub
-description: My Portfolio including all of my info!
+theme: jekyll-theme-dinky
+title: Prompt Portfolio.
+description: I'm Prompt, a developer from Thailand building web apps, desktop software, and tools that turn ideas into working products. I mainly work with HTML, CSS, and JavaScript, alongside React and TypeScript.
 permalink: pretty
